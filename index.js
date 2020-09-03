@@ -31,7 +31,7 @@ app.post('/api/names', (req,res)=>{
 // /api/courses/course 1
 app.get('/api/names/:fPIndex', (req,res)=>{
 const name = names.find(c => c.fPIndex === parseInt(req.params.fPIndex));
-if (!course) res.status(404).send('The course with the given ID was not found')
+if (!name) res.status(404).send('The course with the given ID was not found')
 res.send(course);
 });
 app.put('/api/names/fPIndex', (rer,res)=>{
