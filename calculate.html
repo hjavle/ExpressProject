@@ -113,16 +113,22 @@
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
     $(".submit").on("click", function(event) {
-    event.preventDefault();
-    var newReservation = {
+      event.preventDefault();
+
+      var userInfo = {
         name : $("#reserve-name").val().trim(),
-        phoneNumber : $("#reserve-phone").val().trim()
-    };
-    $.ajax({
-                contentType: 'application/json',
-                data: JSON.stringify(newReservation),
-                type: 'POST',
-                url: '/api/names'});
-  });
+        phoneNumber : $("#reserve-phone").val().trim(),
+        email: $("#reserve-email").val().trim(),
+        electric: parseInt($("#reserve-electric").val().trim()),
+        gas: parseInt($("#reserve-gas").val().trim()),
+        oil: parseInt($("#reserve-oil").val().trim()),
+        milage: parseInt($("#reserve-milage").val().trim())
+      };
+      $.ajax({
+        contentType: 'application/json',
+        data: JSON.stringify(userInfo),
+        type: 'POST',
+        url: '/api/names'});
+      });
 
 </script>

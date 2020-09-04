@@ -6,9 +6,9 @@ app.use(express.static('.'));
 
 const names = [];
 
-function getRank()
+function getRank(electric,gas,oil,milage)
 {
-    return Math.random();
+    return electric + gas + oil + milage;
 }
 
 app.get('/api/names',(req,res) => {
@@ -21,11 +21,21 @@ app.post('/api/names', (req,res)=> {
         return;
     }
 
+    let e = req.body.electric;
+    let g = req.body.gas;
+    let o = req.body.oil;
+    let m = req.body.milage;
+
     const userName = {
         id: names.length + 1,
         name: req.body.name,
         phoneNumber: req.body.phoneNumber,
-        rank: getRank()
+        email : req.body.email,
+        electric: e,
+        gas: g,
+        oil: o,
+        milage: m,
+        rank: getRank(e,g,o,m)
     };
     names.push(userName);
     console.log(names);
