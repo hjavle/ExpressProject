@@ -2,12 +2,10 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
+app.use(express.static('.'));
 
 const names = [];
 
-app.get('/',(req,res)=> {
-    res.send('Welcome to C02 Calculator Page');
-});
 app.get('/api/names',(req,res) =>{
     res.send(names);
 });

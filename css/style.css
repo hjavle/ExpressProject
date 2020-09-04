@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap');@import url('link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="styleshee');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&family=Roboto&display=swap');
+
+
+*{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Open Sans', sans-serif;
+   
+}
+body {
+    
+    background-color:black;
+}
+.jumbotron{
+    margin-top: 50px;
+    background-color:white;
+    
+}
+
+.img-responsive, .climate-header{
+    display:inline-block;  
+    vertical-align: middle;
+    
+}
+
+.climate-header{
+    text-align: center;
+    font-size: 100px;
+    color:green
+}
+.carbon-header{
+    text-align: center;
+    color:green;
+    font-size:45px;
+    font-family: 'Roboto', sans-serif; 
+}
+.carbon-header>p{
+    text-align: center;
+    
+    color:black;
+    font-size:30px;
+}
+.climate-text > p{
+    margin-top: 30px;
+    text-align: center;
+    color:black;
+    font-size: 25px;
+}
+.climate-text > div{
+    vertical-align: middle;
+    text-align: center;
+    margin: 40px;
+    display:inline-block;
+    color:black;
+    font-size: 25px;
+}
+.btn ,.btn-lg, .btn-success{
+    width:250px;
+}
+.shrinkInfo{
+    line-height: 3.5rem;
+    font-size:25px;
+} 
+.causes,.causes >p>a:active, .causes>p>a:hover,.causes>p>a:visited, .causes>p>a:link{  
+    color:black;
+    font-size: 30px;
+    text-decoration: none;
+    
+}
+ .causes>p>a:hover{  
+    color:green;
+    font-size: 30px;
+    text-decoration: none;
+ }
+    
+cite {
+    font-style: italic;
+    text-align: center;
+    
+}
+footer{
+    text-align: center;
+    color:white;
+}
+.social, .social:hover{
+    color: white;
+    font-size:40px;
+  }
+  

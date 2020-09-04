@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  
+
 </head>
 <body>
-    <div class="container" style="text-align: center;">
-        <iframe width="710" height="1300" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" src="https://calculator.carbonfootprint.com/calculator.aspx"></iframe>
+<div class="container">
+  <div class="jumbotron">
+    <div class="img-responsive"><img src="./images/SDG_Icons_Inverted_Transparent_WEB-13.png" width="200" height="180"></div>
+      <div class ="climate-header"> Climate Change</div>
+      <div class="text-center">
+        <a href="/"><button class="btn btn-lg btn-success"><span class="results"></span> Home</button></a>
+        <a href="/tables"><button class="btn btn-lg btn-success"><span class="results"></span> View Results</button></a>
+        <a href="/reserve"><button class="btn btn-lg btn-success"><span class="cfp"></span> CO2 Calculator</button></a>
+        <a href="./shrink.html"><button class="btn btn-lg btn-success"><span class="results"></span> Shrink Footprint</button></a>
+
     </div>
+    <hr>
+    <div class="carbon-header">Carbon Footprint and its impact on Climate change
+      <p>Scientific evidence for warming of the climate system is unequivocal.- Intergovernmental Panel on Climate Change</p>
+    </div>
+    <div class="container">
+      <div class="embed-responsive embed-responsive-16by9">         
+        <iframe width="360" height="115" src="https://www.youtube-nocookie.com/embed/E2j0pu_tM2Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class ="climate-text">
+        <p>The evidence for rapid climate change is compelling:</p>
+        <hr>
+        <div class="img-responsive"> <img src= "./images/markus-spiske-E7p54JSQXY0-unsplash.jpg"width="500" height="700" diaplay="inline-block"> <cite><p><span>Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/s/photos/climate-change?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p</cite></div>
+          <div class ="causes" style="text-align: center;">
+          <p><a href="https://climate.nasa.gov/evidence/" target="_blank">Global Warming </a></p>
+          <p><a href="https://climate.nasa.gov/evidence/"target="_blank">Warming Oceans</a></p>
+          <p><a href="https://climate.nasa.gov/evidence/"target="_blank">Shrinking Ice Sheets</a></p>
+          <p><a href="https://climate.nasa.gov/evidence/"target="_blank">Glacial Retreat</a></p>
+          <p><a href="https://climate.nasa.gov/evidence/"target="_blank">Decreased Snow Cover</a></p>
+          <p><a href="https://climate.nasa.gov/evidence/"target="_blank">Sea level Rise</a></p>
+          <p><a href="https://climate.nasa.gov/evidence/"target="_blank">Declining Arctic Sea Ice</a></p>
+          <p><a href="https://climate.nasa.gov/evidence/"target="_blank">Extreme Events</a></p>
+          <p><a href="https://climate.nasa.gov/evidence/"target="_blank">Ocean Acidification</a></p></div>
+        </div>
+      </div>
+<br>
+</div>
+<footer class="footer">
+  <div class="container">
+    <a class ="social" href="#"><i class="fa fa-fw fa-github"></i> </a> 
+    <a class ="social" href="#"><i class="fa fa-fw fa-linkedin"></i> </a> 
+    <a class ="social" href="#"><i class="fa fa-fw fa-instagram"></i></a> 
+    <a class ="social" href="#"><i class="fa fa-fw fa-twitter"></i></a>
+    <p>Copyright @ 2020 ClimateApp.com</p>
+    <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
+  </div>
+</footer>
+</div>
 </body>
 </html>
