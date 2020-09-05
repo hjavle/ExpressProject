@@ -120,7 +120,7 @@
         newspaperRecycle:  $("input[name='newspaperRecycle']:checked").val()==="Yes"?true:false,
         recycleCans: $("input[name='recycleCans']:checked").val()==="Yes"?true:false
       };
-      
+      console.log(userInfo);
       $.ajax({
         contentType: 'application/json',
         data: JSON.stringify(userInfo),
