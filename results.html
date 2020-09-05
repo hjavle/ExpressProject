@@ -31,7 +31,7 @@
       <h4>Your CO2 FootPrint</h4>
     </div>
     <div class="card-body">
-      <ul id="tableList" class="list-group"></ul>
+      <ul id="userlist" class="list-group"></ul>
     </div>
   </div>
 </div>
@@ -58,12 +58,12 @@
   // We then dynamically display this content in our table. This is very similar to the group projects you just completed.
   // It's also very similar to the NYT search application. In fact, I copied a ton of code from there.
 
-  function runTableQuery() {
+  function runUserQuery() {
     // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
     $.ajax({ url: "/api/names", method: "GET" })
       .then(function(namesData) {
         for (var i = 0; i < namesData.length; i++) {
-          var tableList = $("#tableList");
+          var userlist = $("#userlist");
 
           // Then display the fields in the HTML (Section Name, Date, URL)
           var listItem = $("<li class='list-group-item mt-4'>");
@@ -77,24 +77,23 @@
           );
 
 
-          tableList.append(listItem);
+          userlist.append(listItem);
         }
       });
   }
 
-  // This function resets all of the data in our tables. This is intended to let you restart a demo.
-  function clearTable() {
+  // This function resets all of the data in our userlist. This is intended to let you restart a demo.
+  function clearUsers() {
     alert("Clearing...");
 
-    // Clear the tables on the server and then empty the elements on the client
+    // Clear the users on the server and then empty the elements on the client
     $.ajax({ url: "/api/clear", method: "POST" }).then(function() {
-      $("#waitList").empty();
-      $("#tableList").empty();
+      $("#userlist").empty();
     });
   }
 
-  $("#clear").on("click", clearTable);
-  runTableQuery();
+  $("#clear").on("click", clearUsers);
+  runUserQuery();
 
 
 </script>
