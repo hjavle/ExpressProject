@@ -61,6 +61,7 @@ body {
     width:250px;
 }
 .shrinkInfo{
+    padding:40px;
     line-height: 3.5rem;
     font-size:25px;
 } 
@@ -70,11 +71,11 @@ body {
     text-decoration: none;
     
 }
- .causes>p>a:hover{  
+.causes>p>a:hover{  
     color:green;
     font-size: 30px;
     text-decoration: none;
- }
+}
     
 cite {
     font-style: italic;
@@ -88,5 +89,13 @@ footer{
 .social, .social:hover{
     color: white;
     font-size:40px;
-  }
-  
+}
+
+#resullts-data {
+text-align: center;
+margin-top:50px;
+margin-bottom: 50px;
+margin-right:20px;
+margin-left: 20px;
+
+}

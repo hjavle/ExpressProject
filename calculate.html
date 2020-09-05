@@ -23,13 +23,12 @@
             <a href="/"><button class="btn btn-lg btn-success"><span class="results"></span> Home</button></a>
             <a href="results.html"><button class="btn btn-lg btn-success"><span class="results"></span> View Results</button></a>
             <a href="calculate.html"><button class="btn btn-lg btn-success"><span class="cfp"></span> CO2 Calculator</button></a>
-            <a href="./shrink.html"><button class="btn btn-lg btn-success"><span class="results"></span> Shrink Footprint</button></a>
+            <a href="shrinkfp.html"><button class="btn btn-lg btn-success"><span class="results"></span> Shrink Footprint</button></a>
         </div>
         <hr/>
     <div class="container">
-        <h2 class="text-center" >Find Your Carbon Footprint</h2>     
+    <h2 class="text-center" >Find Your Carbon Footprint</h2>     
       <div class="col">
-        <!-- Calculaton Page -->
         <div class="card" >
           <div class="card-header"style=" text-align:center;" >
             Carbon Footprint Questioner
@@ -37,64 +36,58 @@
           <div class="card-body">
             <form role="form">
               <div class="form-group">
-                <label for="reserve-name">Name</label>
-                <input type="text" class="form-control" id="reserve-name">
+                <label for="user-name">Name</label>
+                <input type="text" class="form-control" id="user-name">
               </div>
               <div class="form-group">
-                <label for="reserve-phone">Phone Number</label>
-                <input type="tel" class="form-control" id="reserve-phone">
+                <label for="user-phone">Phone Number</label>
+                <input type="tel" class="form-control" id="user-phone">
               </div>
               <div class="form-group">
-                <label for="reserve-email">Email</label>
-                <input type="email" class="form-control" id="reserve-email">
+                <label for="user-email">Email</label>
+                <input type="email" class="form-control" id="user-email">
               </div>
               <div class="form-group">
-                <label for="reserve-unique-id">Unique ID</label>
-                <input type="number" class="form-control" id="reserve-unique-id">
+                <label for="user-electric">What is your monthly Electric bill?</label>
+                <input type="number" class="form-control" id="user-electric">
               </div>
               <div class="form-group">
-                <label for="reserve-electric">What is your monthly Electric bill?</label>
-                <input type="number" class="form-control" id="reserve-electric">
+                <label for="user-gas">What is your monthly Gas bill? Enter 0 if you don't use.</label>
+                <input type="text" class="form-control" id="user-gas">
               </div>
               <div class="form-group">
-                <label for="reserve-gas">What is your monthly Gas bill? Enter 0 if you don't use.</label>
-                <input type="number" class="form-control" id="reserve-gas">
+                <label for="user-oil">What is your monthly Oil bill? Enter 0 if you don't use.</label>
+                <input type="text" class="form-control" id="user-oil">
               </div>
               <div class="form-group">
-                <label for="reserve-oil">What is your monthly Oil bill?</label>
-                <input type="number" class="form-control" id="reserve-oil">
+                <label for="user-milage">What is your early Milage? Enter 0 if you don't use.</label>
+                <input type="text" class="form-control" id="user-milage">
               </div>
               <div class="form-group">
-                <label for="reserve-milage">What is your early Milage?</label>
-                <input type="number" class="form-control" id="reserve-milage">
+                <label for="user-lesstnfour">How many less than four hour flights do you take in year?</label>
+                <input type="text" class="form-control" id="user-flightslessfour">
               </div>
               <div class="form-group">
-                <label for="reserve-lesstnfour">How many less than four hour flights do you take in year?</label>
-                <input type="text" class="form-control" id="reserve-flightslessfour">
+                <label for="user-moretnfour">How many more than four hour flights do you take in year?</label>
+                <input type="text" class="form-control" id="user-flightsmorefour">
               </div>
               <div class="form-group">
-                <label for="reserve-moretnfour">How many more than four hour flights do you take in year?</label>
-                <input type="text" class="form-control" id="reserve-flightsmorefour">
+                <label for="user-recycle-news" >Do you recycle newspaper?</label>
+                <lable class="radio-inline"><input type="radio" class="form-control" id="user-newpaperyes">Yes</lable>
+                <lable class="radio-inline"><input type="radio" class="form-control" id="user-newspaperno">No</lable>
               </div>
               <div class="form-group">
-                <label for="reserve-questio1">Do you recycle newspaper?</label>
-                <lable class="radio-inline"><input type="radio" class="form-control" id="reserve-newpaperyes">Yes</lable>
-                <lable class="radio-inline"><input type="radio" class="form-control" id="reserve-newspaperno">No</lable>
-              </div>
-              <div class="form-group">
-                <label for="reserve-questio1">Do you recycle aluminum and tin?</label>
-                <lable class="radio-inline"><input type="radio" class="form-control" id="reserve-cansyes">Yes</lable>
-                <lable class="radio-inline"><input type="radio" class="form-control" id="reserve-cansno">No</lable>
+                <label for="user-recycle-cans">Do you recycle aluminum and tin?</label>
+                <lable class="radio-inline"><input type="radio" class="form-control" id="user-cansyes">Yes</lable>
+                <lable class="radio-inline"><input type="radio" class="form-control" id="user-cansno">No</lable>
               </div>
               <button type="submit" class="btn btn-success submit">Submit</button>
-              <button type="submit" class="btn btn-success submit">Clear</button>
-
             </form>
           </div>
         </div>
       </div>
     </div>
-
+  </div>
 
 <footer class="footer">
   <div class="container">
@@ -103,10 +96,9 @@
         <a class ="social" href="#"><i class="fa fa-fw fa-instagram"></i></a> 
         <a class ="social" href="#"><i class="fa fa-fw fa-twitter"></i></a>
         <p>Copyright @ 2020 ClimateApp.com</p>
-        <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
   </div>
 </footer>
-</div>
+
 </body>
 </html>
 
@@ -116,19 +108,19 @@
       event.preventDefault();
 
       var userInfo = {
-        name : $("#reserve-name").val().trim(),
-        phoneNumber : $("#reserve-phone").val().trim(),
-        email: $("#reserve-email").val().trim(),
-        electric: parseInt($("#reserve-electric").val().trim()),
-        gas: parseInt($("#reserve-gas").val().trim()),
-        oil: parseInt($("#reserve-oil").val().trim()),
-        milage: parseInt($("#reserve-milage").val().trim())
+        name : $("#user-name").val().trim(),
+        phoneNumber : $("#user-phone").val().trim(),
+        email: $("#user-email").val().trim(),
+        electric: parseInt($("#user-electric").val().trim()),
+        gas: parseInt($("#user-gas").val().trim()),
+        oil: parseInt($("#user-oil").val().trim()),
+        milage: parseInt($("#user-milage").val().trim())
       };
       $.ajax({
         contentType: 'application/json',
         data: JSON.stringify(userInfo),
         type: 'POST',
-        url: '/api/names'});
+        url: 'api/names'});
       });
 
 </script>

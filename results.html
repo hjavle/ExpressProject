@@ -4,8 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Results Page</title>
-
-  <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
@@ -15,46 +13,29 @@
 </head>
 
 <body>
-
-<div class="container">
-  
+<div class="container">  
   <div class="jumbotron">
     <div class="img-responsive"><img src="./images/SDG_Icons_Inverted_Transparent_WEB-13.png" width="200" height="180"></div>
       <div class ="climate-header"> Climate Change</div>
         <div class="text-center">
             <a href="/"><button class="btn btn-lg btn-success"><span class="results"></span> Home</button></a>
             <a href="results.html"><button class="btn btn-lg btn-success"><span class="results"></span> View Results</button></a>
-            <a href="calculate.html"><button class="btn btn-lg btn-success"><span class="cfp"></span> CO2 Calculator</button></a>
-            <a href="./shrink.html"><button class="btn btn-lg btn-success"><span class="results"></span> Shrink Footprint</button></a>
-    
-  </div>
-  
-</div>
+            <a href="calculate.html"><button class="btn btn-lg btn-success"><span class="results"></span> CO2 Calculator</button></a>
+            <a href="shrink.html"><button class="btn btn-lg btn-success"><span class="results"></span> Shrink Footprint</button></a>
+        </div>
+        <hr>
 
-<div class="row">
-  <div class="col-lg-12">
-
-        <!-- Current Tables in Use -->
-  <div class="card">
+<div class=".d-flex flex-row" id="resullts-data" >
+  <div class="card" >
     <div class="card-header">
       <h4>Your CO2 FootPrint</h4>
-</div>
-  <div class="card-body">
-    <ul id="tableList" class="list-group"></ul>
-</div>
-</div>
-
-        <!-- Waiting List Card -->
-        <div class="card mt-4">
-          <div class="card-header">
-            <h4>Waiting List</h4>
-          </div>
-          <div class="card-body">
-            <ul id="waitList" class="list-group"></ul>
-          </div>
-        </div>
-      </div>
     </div>
+    <div class="card-body">
+      <ul id="tableList" class="list-group"></ul>
+    </div>
+  </div>
+</div>
+</div>
 
 <footer class="footer mt-4">
   <footer class="footer">
@@ -64,20 +45,11 @@
       <a class ="social" href="#"><i class="fa fa-fw fa-instagram"></i></a> 
       <a class ="social" href="#"><i class="fa fa-fw fa-twitter"></i></a>
       <p>Copyright @ 2020 ClimateApp.com</p>
-      <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
     </div>
   </footer>
-  <div class="container">
-    <p>Control Panel</p>
-    <p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API
-            Wait List</a>
-    </div>
-</footer>
-
 </div>
 
 </body>
-
 
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS LOADED FROM OUR SERVER -->
 <script type="text/javascript">
