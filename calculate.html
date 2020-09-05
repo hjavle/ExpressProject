@@ -37,49 +37,49 @@
             <form role="form">
               <div class="form-group">
                 <label for="user-name">Name</label>
-                <input type="text" class="form-control" id="user-name">
+                <input type="text" class="form-control" id="username">
               </div>
               <div class="form-group">
                 <label for="user-phone">Phone Number</label>
-                <input type="tel" class="form-control" id="user-phone">
+                <input type="tel" class="form-control" id="phone">
               </div>
               <div class="form-group">
                 <label for="user-email">Email</label>
-                <input type="email" class="form-control" id="user-email">
+                <input type="email" class="form-control" id="email">
               </div>
               <div class="form-group">
                 <label for="user-electric">What is your monthly Electric bill?</label>
-                <input type="number" class="form-control" id="user-electric">
+                <input type="number" class="form-control" id="electricBill">
               </div>
               <div class="form-group">
                 <label for="user-gas">What is your monthly Gas bill? Enter 0 if you don't use.</label>
-                <input type="text" class="form-control" id="user-gas">
+                <input type="text" class="form-control" id="gasBill">
               </div>
               <div class="form-group">
                 <label for="user-oil">What is your monthly Oil bill? Enter 0 if you don't use.</label>
-                <input type="text" class="form-control" id="user-oil">
+                <input type="text" class="form-control" id="oilBill">
               </div>
               <div class="form-group">
                 <label for="user-milage">What is your early Milage? Enter 0 if you don't use.</label>
-                <input type="text" class="form-control" id="user-milage">
+                <input type="text" class="form-control" id="milage">
               </div>
               <div class="form-group">
                 <label for="user-lesstnfour">How many less than four hour flights do you take in year?</label>
-                <input type="text" class="form-control" id="user-flightslessfour">
+                <input type="text" class="form-control" id="lessThan4HourFlights">
               </div>
               <div class="form-group">
                 <label for="user-moretnfour">How many more than four hour flights do you take in year?</label>
-                <input type="text" class="form-control" id="user-flightsmorefour">
+                <input type="text" class="form-control" id="moreThan4HourFlights">
               </div>
               <div class="form-group">
                 <label for="user-recycle-news" >Do you recycle newspaper?</label>
-                <lable class="radio-inline"><input type="radio" class="form-control" id="user-newpaperyes">Yes</lable>
-                <lable class="radio-inline"><input type="radio" class="form-control" id="user-newspaperno">No</lable>
+                <lable class="radio-inline"><input type="radio" class="form-control" id="newspaperRecycle">Yes</lable>
+                <lable class="radio-inline"><input type="radio" class="form-control" id="newspaperRecycle">No</lable>
               </div>
               <div class="form-group">
                 <label for="user-recycle-cans">Do you recycle aluminum and tin?</label>
-                <lable class="radio-inline"><input type="radio" class="form-control" id="user-cansyes">Yes</lable>
-                <lable class="radio-inline"><input type="radio" class="form-control" id="user-cansno">No</lable>
+                <lable class="radio-inline"><input type="radio" class="form-control" id="recycleCans">Yes</lable>
+                <lable class="radio-inline"><input type="radio" class="form-control" id="recycleCans">No</lable>
               </div>
               <button type="submit" class="btn btn-success submit">Submit</button>
             </form>
@@ -108,19 +108,23 @@
       event.preventDefault();
 
       var userInfo = {
-        name : $("#user-name").val().trim(),
-        phoneNumber : $("#user-phone").val().trim(),
-        email: $("#user-email").val().trim(),
-        electric: parseInt($("#user-electric").val().trim()),
-        gas: parseInt($("#user-gas").val().trim()),
-        oil: parseInt($("#user-oil").val().trim()),
-        milage: parseInt($("#user-milage").val().trim())
+        name : $("#username").val().trim(),
+        phoneNumber : $("#phone").val().trim(),
+        email: $("#email").val().trim(),
+        electric: parseInt($("#electricBill").val().trim()),
+        gas: parseInt($("#gasBill").val().trim()),
+        oil: parseInt($("#oilBill").val().trim()),
+        milage: parseInt($("#milage").val().trim()),
+        lessThan4HourFlights: parseInt($("#lessThan4HourFlights").val().trim()),
+        moreThan4HourFlights: parseInt($("#moreThan4HourFlights").val()),
+        newspaperRecycle:  $("input[name='newspaperRecycle']:checked").val()==="Yes"?true:false,
+        recycleCans: $("input[name='recycleCans']:checked").val()==="Yes"?true:false
       };
+      
       $.ajax({
         contentType: 'application/json',
         data: JSON.stringify(userInfo),
         type: 'POST',
         url: 'api/names'});
       });
-
 </script>

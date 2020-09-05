@@ -68,8 +68,6 @@
           // Then display the fields in the HTML (Section Name, Date, URL)
           var listItem = $("<li class='list-group-item mt-4'>");
 
-
-
           listItem.append(
             $("<h2>").text("Name #" + (i + 1)),
             $("<hr>"),
@@ -96,10 +94,6 @@
   }
 
   $("#clear").on("click", clearTable);
-
-
-  // Run Queries!
-  // ==========================================
   runTableQuery();
 
 

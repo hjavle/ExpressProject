@@ -6,9 +6,9 @@ app.use(express.static(__dirname));
 
 const names = [];
 
-function getRank(electric,gas,oil,milage)
+function getRank(electric,gas,oil,milage,flf,fmf)
 {
-    return electric + gas + oil + milage;
+    return((electric * 105) + (gas * 105) + (oil * 113) + (milage * 0.79) + (flf * 1100) + (fmf * 4400));
 }
 
 app.get('/api/names',(req,res) => {
@@ -25,6 +25,8 @@ app.post('/api/names', (req,res)=> {
     let g = req.body.gas;
     let o = req.body.oil;
     let m = req.body.milage;
+    let flf = req.body.lessThan4HourFlights;
+    let fmf = req.body.moreThan4HourFlights;
 
     const userName = {
         id: names.length + 1,
@@ -35,10 +37,11 @@ app.post('/api/names', (req,res)=> {
         gas: g,
         oil: o,
         milage: m,
-        rank: getRank(e,g,o,m)
+        rank: getRank(e,g,o,m,flf,fmf)
     };
+
     names.push(userName);
-    console.log(names);
+    console.log(userName);
     res.send(userName);
 });
 // /api/courses/course 1
