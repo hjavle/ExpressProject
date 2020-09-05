@@ -32,7 +32,7 @@
             Carbon Footprint Questioner
           </div>
           <div class="card-body">
-            <form role="form">
+            <form role="form" action="results.html">
               <div class="form-group">
                 <label for="user-name">Name</label>
                 <input type="text" class="form-control" id="username">
@@ -51,23 +51,23 @@
               </div>
               <div class="form-group">
                 <label for="user-gas">What is your monthly Gas bill? Enter 0 if you don't use.</label>
-                <input type="text" class="form-control" id="gasBill">
+                <input type="text" class="form-control" id="gasBill" value="0">
               </div>
               <div class="form-group">
                 <label for="user-oil">What is your monthly Oil bill? Enter 0 if you don't use.</label>
-                <input type="text" class="form-control" id="oilBill">
+                <input type="text" class="form-control" id="oilBill" value="0">
               </div>
               <div class="form-group">
                 <label for="user-milage">What is your early Milage? Enter 0 if you don't use.</label>
-                <input type="text" class="form-control" id="milage">
+                <input type="text" class="form-control" id="milage" value="0">
               </div>
               <div class="form-group">
                 <label for="user-lesstnfour">How many less than four hour flights do you take in year?</label>
-                <input type="text" class="form-control" id="lessThan4HourFlights">
+                <input type="text" class="form-control" id="lessThan4HourFlights" value="0">
               </div>
               <div class="form-group">
                 <label for="user-moretnfour">How many more than four hour flights do you take in year?</label>
-                <input type="text" class="form-control" id="moreThan4HourFlights">
+                <input type="text" class="form-control" id="moreThan4HourFlights" value="0">
               </div>
               <div class="form-group">
                 <label for="user-recycle-news" >Do you recycle newspaper?</label>
@@ -103,7 +103,7 @@
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
     $(".submit").on("click", function(event) {
-      event.preventDefault();
+      //event.preventDefault();
 
       let nRecycle = $("input[name='newspaperRecycle']:checked").val();
       console.log(nRecycle);
