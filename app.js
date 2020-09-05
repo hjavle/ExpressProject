@@ -9,10 +9,15 @@ const names = [];
 function getRank(electric,gas,oil,milage,flf,fmf,rnp,rc)
 {
     let sum = ((electric * 105) + (gas * 105) + (oil * 113) + (milage * 0.79) + (flf * 1100) + (fmf * 4400));
-    if (!rnp && !rc) sum += 150;
-    return sum;
+    if (!rnp && !rc) {
+        sum +=  184 + 166;
+    } else if (!rnp && rc===true) {
+        sum +=  184;
+    } else if(rnp===true && !rc) {
+        sum +=  166 ;
+    } 
+return sum;
 }
-
 app.get('/api/names',(req,res) => {
     res.send(names);
 });

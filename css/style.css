@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap');@import url('link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="styleshee');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap');
+@import url('link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="styleshee');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&family=Roboto&display=swap');
 
 
@@ -80,6 +80,12 @@ body {
 cite {
     font-style: italic;
     text-align: center;
+    
+}
+.reseut-msg{
+    text-align: center;
+    color:green;
+    font-size: 15px;
     
 }
 footer{
