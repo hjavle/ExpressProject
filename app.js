@@ -16,6 +16,7 @@ function getRank(electric,gas,oil,milage,flf,fmf,rnp,rc)
     } else if(rnp===true && !rc) {
         sum +=  166 ;
     } 
+    console.log(sum);
 return sum;
 }
 app.get('/api/names',(req,res) => {
