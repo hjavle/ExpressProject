@@ -38,6 +38,7 @@
 
 * `results.html` presents the results from user's Carbon Foot Print calculations and shows the results.
 
+
 ![](images/results.png)
 
 *  `shrinkfp.html` presents with recommendations with how to reduce the Carbon Foot Print.
